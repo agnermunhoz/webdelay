@@ -7,7 +7,7 @@ serverPort = 8080
 
 class MyServer(BaseHTTPRequestHandler):
     def do_GET(self):
-        time.sleep(60)
+        #time.sleep(60)
         self.send_response(200)
         self.send_header("Content-type", "text/html")
         self.end_headers()
