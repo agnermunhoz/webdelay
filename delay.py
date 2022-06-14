@@ -6,7 +6,7 @@ serverPort = 8080
 
 class MyServer(BaseHTTPRequestHandler):
     def do_GET(self):
-        time.sleep(850)
+        time.sleep(60)
         self.send_response(200)
         self.send_header("Content-type", "text/html")
         self.end_headers()
@@ -14,7 +14,7 @@ class MyServer(BaseHTTPRequestHandler):
         self.wfile.write(bytes("<html>", "utf-8"))
         self.wfile.write(bytes("<body>", "utf-8"))
         self.wfile.write(bytes("<h1>Delay</h1>", "utf-8"))
-        self.wfile.write(bytes("<p>850s delay</p>", "utf-8"))
+        self.wfile.write(bytes("<p>60s delay</p>", "utf-8"))
         self.wfile.write(bytes("</body>", "utf-8"))
         self.wfile.write(bytes("</html>", "utf-8"))
 
